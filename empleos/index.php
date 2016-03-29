@@ -8,7 +8,7 @@ include("../php/dbconect.php");
 <head>
 	<meta charset="utf-8">
 	<meta name="Title" content="VALPARTS,C.A.">
-	<meta name="description" content="Nos Encontramos en la Búsqueda de Talento, si eres Lcdo(a). en Administración o Contaduría Publica. Tienes buena Presencia, eres responsable, Proactivo, con experiencia con Contribuyentes Especiales, A2 Contable/Administrativo, Premiun Soft y Microsoft Office Avanzado. (Manejo del Software no es limitativo). Te invitamos a participar en nuestro proceso de reclutamiento y selección, enviando tu síntesis curricular. excelente ambiente laboral. ">
+	<meta name="description" content="Eres Administrador o Contador Eres responsable Proactivo  experiencia Contribuyentes Especiales. Manejo del Software no es limitativo. Participa en el proceso reclutamiento Envía tu currículo. ">
 	<meta name="keywords" content="empresa, mayorista, repuestos, partes, automotriz, automotrices, vehiculos, carros, camiones, partes eléctricas, eléctricas, partes mecánicas, mecánicas, ignición, boninas ignición, bombas agua, bombas gasolina, bujías, cables bujía, distribuidores, filtros gasolina, reluctores, rotores, tapas, sensores, vacuums, válvulas PCV, automáticos, bobinas captadoras, bornes, carboneras, luces HID, ramales cruce, relays, resistencias, switches, bocinas rueda, carburadores, cepillos limpia parabrisas, limpia parabrisas, platos clutch, discos clutch, envases, reservorios, hidrocollarines, poleas, tensores, correas" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
