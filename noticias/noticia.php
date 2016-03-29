@@ -7,12 +7,27 @@ include("../php/cont.sev.php");
 $ssql=sprintf("SELECT * FROM noticias WHERE id_noticia='".$_GET["news"]."'");
 //ejecuta la sentencia sql
 $resultado = $mysqli->query($ssql);
-
+$resultado2 =  $mysqli->query($ssql);
+//busqueda de la ultima noticia
+//$ssql_meta=sprintf("SELECT * FROM noticias ORDER BY id_noticia DESC LIMIT 1");
+//ejecuta la sentencia sql
+//$res_meta = $mysqli->query($ssql_meta);
+$row_meta = $resultado2->fetch_array(MYSQLI_ASSOC);
+$meta = $row_meta["titulo"]." ".strip_tags(substr($row_meta["contenido"],0,800));
 ?>
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
+	<meta charset="utf-8">
+	<meta name="Title" content="VALPARTS,C.A.">
+	<meta name="description" content="<?php echo $meta; ?>">
+	<meta name="keywords" content="empresa, mayorista, repuestos, partes, automotriz, automotrices, vehiculos, carros, camiones, partes eléctricas, eléctricas, partes mecánicas, mecánicas, ignición, boninas ignición, bombas agua, bombas gasolina, bujías, cables bujía, distribuidores, filtros gasolina, reluctores, rotores, tapas, sensores, vacuums, válvulas PCV, automáticos, bobinas captadoras, bornes, carboneras, luces HID, ramales cruce, relays, resistencias, switches, bocinas rueda, carburadores, cepillos limpia parabrisas, limpia parabrisas, platos clutch, discos clutch, envases, reservorios, hidrocollarines, poleas, tensores, correas" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="rating" content="general">
+	<meta name="robots" content="index, follow, archve">
+	<meta name="revisit-after" content="10 days">
+	<meta name="copyright" content="Este sitio y todo su contenido © Copyright 2016 VALPARTS,C.A. Mérida, Venezuela.">
 <title>VALPARTS,C.A.</title>
 <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
 <link href="../css/estilos.css" rel="stylesheet" type="text/css">
