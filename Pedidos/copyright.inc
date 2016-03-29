@@ -1,0 +1,1 @@
+<font face="Tahoma" style="font-size: 9pt">Copyright 2008 - <%=year(now)%>   Insystech, C.A.  - Todos los derechos reservados</font>

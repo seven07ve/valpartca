@@ -1,0 +1,252 @@
+@charset "utf-8";
+body {
+	font-family:"Open Sans",sans;
+	font-size:14px;
+	color:#FFFFFF;
+	margin:0px 0px 0px 0px;
+	background-color: #999;
+	background-image:url(../imagenes/fondo.jpg);
+	background-repeat: repeat;
+}
+
+.encabezado{
+	color:#000000; text-shadow:#E1F8FF 0 0 10px; font-size:30px; width:100%; height:auto; padding:20px 0px 20px 0px; background: -webkit-linear-gradient(top, #000678, #000000);
+}
+
+.contenedor{
+	width:100%" align="center;
+}
+
+h2, h3 {
+	text-shadow:rgba(0,0,0,1.00) 3px 3px 4px;
+}
+
+a{
+	color:#FFFFFF;
+}
+a:hover{
+	color:#FFFFFF;
+}
+.nomb-user{
+	color:#FF6; text-align:right; width:auto; height:14px; margin-top:-14px; padding-right:10px;
+}
+
+.menu-prim{
+	color:#FFF; text-align:right; font-size:16px; margin:0px; padding:10px 10px 0px 10px; background:url(../acceso/imagenes/adm-hed-bg.png) repeat;
+}
+
+.menu-sec{
+	color:#FFF; text-align:left; font-size:16px; text-transform:uppercase; margin:0px; padding:10px 10px 5px 10px; background:rgba(0,0,0,0.30);
+}
+
+ul.bot-menu-prim {
+width: 100%; list-style: none; margin: 0; padding: 0;
+}
+
+ul.bot-menu-prim li {
+float: right;
+}
+ul.bot-menu-prim li a {
+padding: .3em .5em; display: block; text-decoration: none; color: #FFF; border: 1px solid #0024AC; border-radius:4px; margin: 0 3px; box-shadow:#3BD1FF 0 0 3px; background:rgba(0,0,0,0.40);
+}
+
+ul.bot-menu-prim li a:hover{
+	color: #FFFFFF; text-shadow:#3BD1FF 0 0 4px; box-shadow:#B3B5FF 0 0 5px; background:rgba(0,0,0,0.20);
+}
+.menu-sec a {
+padding: .3em; text-decoration: none; color: #FFF;
+}
+
+.menu-sec a:hover{
+	color: #FFFFFF; text-shadow:#FFF 0px 0px 5px
+}
+
+.form-acceso{
+	color:#FFF;
+	width:500px;
+	height:300px;
+	background:url(../acceso/imagenes/adm-form-acc-bg.png) repeat;
+	border:1px solid #0024AC !important;
+	margin-top: 50px;
+	padding:6px;
+	box-shadow:#3BD1FF 0 0 6px;
+	-moz-border-radius:10px;
+	
+	-webkit-border-radius:10px;
+}
+
+input{
+	color:#FFFFFF; margin-top:5px; background:none; border-radius:5px; border:1px solid #0024AC !important; box-shadow:#3BD1FF 0 0 3px;
+}
+
+.background-form{
+	color:#FFF;	width:80%; min-height:400px; background:url(../acceso/imagenes/adm-form-acc-bg.png) repeat; border:2px solid thin #000 !important; margin-top: 50px; padding:6px; border-radius:10px;
+}
+.tit-cont{
+	color:#FFF; font-size:18px; text-align:center;
+}
+.mont-img{
+	width:330px; height:1000px; display:inline-block; margin:0; padding:50px 0 0; background:rgba(0,0,0,0.30); overflow:auto;
+}
+.cont-inf-mont{
+	float:left; width:900px; height:800px; margin:30px 1% 0; display:inline-block;
+}
+.cont-img-mont{
+	width:330px; max-height:230px; margin:5px 0;
+}
+.background-negro{
+	width:900px; height:auto; padding:20px 0; background:rgba(0,0,0,0.30); border-radius:8px;
+}
+
+/*-----------------------MENSAJES JAVA SCRIPT---------------------------------*/
+#aviso{
+	font-size:12px;
+	color:#C33;
+	display:none;
+}
+#not-tit-restantes{
+	color:#FFF;
+	font-size:12px;
+	display:none;
+}
+
+#not-tit-long{
+	font-size:12px;
+	color:#FFF;
+	display:none;
+}
+#resta{
+	border:none; background:none; color:#FFF;
+}
+/*-----------------------------------------------------------------------------*/
+
+/*                              NOTICIAS                                       */
+.noticias{
+	width:800px; min-height:420px; text-align:justify; color:#2d2d2d; margin:20px 0px 0px 0px; background-color:#FFF; padding:10px;
+}
+
+.noticias img{
+	float:left; width:395px; height:286px; margin:0px 50px 10px 0px;
+/*	-moz-box-shadow:2px 1px 3px #919192;*/
+	box-shadow: 0 0 10px #333;
+/*	-webkit-box-shadow: 0 1px 3px #919192;
+	-o-box-shadow: 0 1px 3px #919192;
+*/}
+
+.noticias-titulo{
+	font-family:'Baskerville Old Face', Tahoma; font-size:20px; text-transform:uppercase;
+}
+
+.noticias-fecha{
+	font-family:'Oswald', sans-serif; font-weight:book; font-size:12px; margin:15px 0px;
+}
+
+.noticias-cuerpo{
+	font-family:Tahoma; font-size:13px; margin-bottom:20px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+
+/*                                    ANUNCIO                                                     */
+.seccion-anuncio{
+	width:815px; height:150px; margin:10px 0 0 0; color:#2E2E2E;
+}
+
+.seccion-img{
+	float:left; width:210px; height:150px; margin:0px 15px 0px 0px;
+/*	-moz-box-shadow:2px 1px 3px #919192;*/
+	box-shadow: 0 0 10px #333;
+/*	-webkit-box-shadow: 0 1px 3px #919192;
+	-o-box-shadow: 0 1px 3px #919192;
+*/}
+
+.contenedor-anuncio{
+	float:left; width:573px; height:150px; padding-left:15px;
+}
+
+.linea-vert{
+	float:left; width:1px; height:150px; background-color:#000; box-shadow: -1px 0 1px #333;
+}
+
+.anuncio-nombre{
+	font-family:'Baskerville Old Face', Tahoma; color:#2e2e2e; font-size:18px; text-transform:uppercase; text-align:left;
+}
+
+.anuncio-cuerpo{
+	font-family:Tahoma; font-size:12px; text-align:justify; height:84px; margin-top:7px;
+}
+
+.anuncio-direccion{
+	float:left; font-family:Tahoma; font-size:10px; color:#FFF; width:263px; height:30px; margin-top:8px; border-radius:4px; background-color:#959595;
+}
+
+.review-bar{
+	width:815px; height:25px; border-radius:4px; background-color:#000;
+}
+
+.contenedor-rates{
+	float:left; width:310px; margin-top:5px;
+}
+
+.rates{
+	font-family:'Baskerville Old Face', Tahoma; color:#555555; font-weight:bold; font-size:12px;
+}
+
+.rates-links{
+	color:#555555; text-decoration:none;
+}
+.rates-links-review{
+	color:#FFF; text-decoration:none;
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------LIFESTYLE--------------------------------------------*/
+.tips{
+	float:left; font-family:Tahoma, Geneva, sans-serif; width:815px; min-height:407px; text-align:justify; padding:0px; color:#2d2d2d; margin:0;
+}
+
+.titulo-tips{
+	float:left; font-family:'Baskerville Old Face', Tahoma; color:#2d2d2d; font-weight:normal; text-transform:uppercase; font-size:16px; width:769px; margin:15px 23px 0px 23px;
+}
+
+.contenido-tip{
+	float:left; font-family:Tahoma, Geneva, sans-serif; font-weight:normal; font-size:12px; width:769px; margin:15px 23px 15px 23px;
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+/*----------------------------------------------ASK INSTAYA-------------------------------------------------*/
+.ask{
+	font-family:Tahoma, Geneva, sans-serif; width:815px; min-height:171px; text-align:justify; padding:0px; color:#2d2d2d; margin:0;
+}
+
+.titulo-ask{
+	float:left; font-weight:bold; text-transform:capitalize; font-size:12px; width:769px; margin:15px 23px 0px 23px;
+}
+.titulo-ask p{
+	margin:0px;
+}
+
+.contenido-ask{
+	float:left; font-weight:normal; font-size:12px; width:769px; margin:15px 23px 15px 23px;
+}
+
+.contenido-ask p{
+	margin:0px;
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+/*---------------------------------------------- COMENTARIOS ------------------------------------*/
+.reviews{
+	float:left; font-family:Tahoma, Geneva, sans-serif; width:795px; min-height:180px; text-align:justify; padding:0px 10px; color:#2d2d2d; margin:0;
+}
+.contenedor-review{
+	width:794px; height:auto; margin-bottom:10px;;
+}
+.comentario{
+	float:left; width:793px; font-weight:normal; font-size:12px; padding:14px 0px; border-bottom:1px solid #000;
+}
+.comentario p{
+	margin:0px;
+}
+
+/*------------------------------------------------------------------------------------------------*/

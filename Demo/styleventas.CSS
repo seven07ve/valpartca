@@ -1,0 +1,78 @@
+﻿<style>
+
+/*------------------------------------LOGIN-------------------------------*/
+
+body {
+/*background-image: url("http://dcmlub.com/images/fondo_findcm2.jpg");*/
+background-repeat: no-repeat;
+background-position: center top;
+background-size: 100%;
+background-color: #FFFFFF;
+}
+
+
+div {
+opacity: 0.93;
+filter: alpha(opacity=93);
+}
+
+form table {
+background-color: #EEE;
+padding: 10px 15px 10px 15px;
+border: 10px solid #777879;
+border-radius: 20px;
+}
+
+p b {
+background-color: #EEE;
+padding: 15px 19px 29px 18px;
+border: 10px solid #777879;
+}
+
+b, strong {
+text-transform: uppercase;
+}
+
+
+/*-----------------------------------------HEADER---------------------------*/
+
+body {
+/*background-image: url("http://dcmlub.com/images/fondo_findcm2.jpg");*/
+background-repeat: repeat;
+background-position: center top;
+}
+
+
+/*---------------------------------FRAMES------------------------------*/
+
+body {
+background-repeat: no-repeat;
+background-position: center top;
+background-size: 100%;
+background-color: #FFFFFF;
+/*background-image: url("http://dcmlub.com/images/fondo_findcm2.jpg");*/
+font-family: Trebuchet MS;
+}
+
+table {
+background-color: transparent;
+height: auto;
+}
+
+td {
+background-color: #f5f5f5;
+padding:5px 0 5px 0;
+}
+
+#table6, #table6 td {
+background-color: #fff;
+}
+
+#table8, #table8 td {
+background-color: #fff;
+}
+
+font {
+font-family: Trebuchet MS;
+}
+</style>

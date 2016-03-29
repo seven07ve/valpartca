@@ -1,0 +1,64 @@
+<Object Runat="Server" Scope="application" ID="dOnlineUsers" ProgID="Scripting.Dictionary"></Object>
+
+<SCRIPT LANGUAGE="VBScript" RUNAT="Server">
+
+'You can add special event handlers in this file that will get run automatically when
+'special Active Server Pages events occur. To create these handlers, just create a
+'subroutine with a name from the list below that corresponds to the event you want to
+'use. For example, to create an event handler for Session_OnStart, you would put the
+'following code into this file (without the comments):
+
+'Sub Session_OnStart
+'**Put your code here **
+'End Sub
+
+'EventName              Description
+'Session_OnStart        Runs the first time a user runs any page in your application
+'Session_OnEnd          Runs when a user's session times out or quits your application
+'Application_OnStart    Runs once when the first page of your application is run for the first time by any user
+'Application_OnEnd      Runs once when the web server shuts down
+
+</SCRIPT>
+
+<SCRIPT LANGUAGE="VBScript" RUNAT="Server">
+Sub Application_OnStart
+		
+		application("ServerStart") = now
+		Application("ActiveUsers") = 0
+		Application("XDTA300_ConnectionString") = "Provider=SQLOLEDB.1;Persist Security Info=False;User ID=SQLUser_dcm;PASSWORD=Xml2007*;Initial Catalog=valparts_com_sql;Data Source=198.71.225.145;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;"
+		Application("XDTA201_ConnectionString") = "Provider=SQLOLEDB.1;Persist Security Info=False;User ID=SQLUser_xdata;PASSWORD=Xml2007;Initial Catalog=XDTA201;Data Source=192.168.1.8;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;"
+		Application("XDTA300_ConnectionTimeout") = 100
+		Application("XDTA300_CommandTimeout") = 15
+		Application("XDTA300_CursorLocation") = 3
+		
+
+End Sub
+
+Sub Session_OnStart
+	
+	'Retener la Variables Sesión 30 Minutos
+	Session.Timeout = 30 
+	Session("glConexion") = "SQL"
+	Application.Lock
+ 	Application("ActiveUsers") = Application("ActiveUsers") + 1
+ 	Application.UnLock
+	
+	
+End sub
+
+Sub Session_OnEnd
+
+	on error resume next
+	
+	'Remove this session from our collection
+	dOnlineUsers.Remove(Session.SessionID)
+
+	Session("glAutorizacion") = ""
+	Application.Lock
+	Application("ActiveUsers") = Application("ActiveUsers") - 1
+ 	Application.UnLock
+
+End Sub 
+
+
+</SCRIPT>

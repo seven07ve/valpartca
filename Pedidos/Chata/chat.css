@@ -1,0 +1,98 @@
+****************************
+PIE
+*****************************
+/
+
+#footer {
+	clear: both;
+	padding: 1.5em 0 3em;
+	color:#555;
+	text-align: right;
+	font-size: 0.8em;
+}
+
+
+
+
+
+
+
+
+
+.tooltip {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	display: none;
+	color:#fff;
+	font-family:sans-serif;
+}
+.tooltip1 {
+	border:1px solid #222;
+	border-bottom: 0;
+	background: #444;
+	padding: 4px 5px;
+}
+.tooltip2 {
+	background: url('tooltip.png') 0 0 repeat-x;
+	height: 5px;
+}
+
+
+.contenido ul {
+	padding-left: 2em;
+}
+
+.contenido ul li {
+	padding-left: 0.1em;
+	list-style: square;
+	line-height: 1.3em;
+}
+
+
+
+.ol {
+	list-style: decimal;
+	margin-left: 1.5em;
+}
+.ul {
+	list-style: circle;
+	margin-left: 1.5em;
+}
+.ul li, .ol li {
+	padding: 0.1em;
+}
+
+
+
+
+
+#taskbar{
+	height:25px;
+	width:102%;
+	margin:auto;
+	position: fixed;
+	bottom: 0;
+	z-index: 199;
+}
+#taskbar #container {
+	background-color:#fafafa;
+	border:1px solid #999;
+	display:block;
+	margin-right:15px;
+	float: right;
+	height:25px;
+	width: 260px;
+}
+#taskbar #chata {
+	font-weight: bold;
+ font-family:arial;	font-size: 11px;
+	padding: 3px 5px;
+	color: #222;
+	display: block;
+}
+#chat {
+	position: absolute;
+	top: -360px;
+}

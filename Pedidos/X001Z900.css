@@ -1,0 +1,163 @@
+﻿P
+{
+    FONT-FAMILY: 'Tahoma';
+    FONT-SIZE: small
+}
+.P1
+{
+    FONT-FAMILY: Tahoma;
+    FONT-SIZE: x-small
+}
+.P2
+{
+    FONT-FAMILY: 'Tahoma';
+    FONT-SIZE: x-small
+}
+.PH
+{
+    FONT-FAMILY: Tahoma;
+    FONT-SIZE: xx-small
+}
+.PT
+{
+    FONT-FAMILY: Tahoma;
+    FONT-SIZE: x-small;
+    TEXT-ALIGN: justify
+}
+.PD
+{
+    FONT-FAMILY: Tahoma;
+    FONT-SIZE: x-small
+}
+A
+{
+    TEXT-DECORATION: none
+}
+A:visited
+{
+    COLOR: blue
+}
+A:link
+{
+    COLOR: blue
+}
+A:hover
+{
+    COLOR: blue;
+    FONT-WEIGHT: bold
+}
+.TDT
+{
+    BACKGROUND-COLOR: white;
+    COLOR: black;
+    FONT-FAMILY: 'Tahoma';
+    TEXT-ALIGN: center;
+    WIDTH: 100%;
+    font-SIZE: 10pt;
+    font-weight: bold
+}
+.TDT1
+{
+    BACKGROUND-COLOR: WHITE;
+    COLOR: black;
+    FONT-FAMILY: Tahoma;
+    FONT-SIZE: x-small;
+    TEXT-ALIGN: center 
+}
+.TDS
+{
+    BACKGROUND-COLOR: #ffff99;
+    COLOR: black;
+    FONT-FAMILY: Tahoma;
+    FONT-SIZE: xx-small;
+	font-weight: bold
+}
+.TDS1
+{
+    BACKGROUND-COLOR: #ffff99;
+    COLOR: black;
+    FONT-FAMILY: Tahoma;
+    FONT-SIZE: xx-small
+
+	}
+.TDD2
+{
+    BACKGROUND-COLOR: #FFFF40;
+    COLOR: black;
+    FONT-FAMILY: Tahoma;
+    FONT-SIZE: xx-small
+}
+.TDD
+{
+    BACKGROUND-COLOR: #e9e9e9;
+    COLOR: black;
+    FONT-FAMILY: Tahoma;
+    FONT-SIZE: xx-small
+}
+.TDDA
+{
+    BACKGROUND-COLOR: #ECF2FF;
+    COLOR: black;
+    FONT-FAMILY: Tahoma;
+    FONT-SIZE: xx-small
+}
+.TDDB
+{
+    BACKGROUND-COLOR: #FFFFFF;
+    COLOR: black;
+    FONT-FAMILY: Tahoma;
+    FONT-SIZE: xx-small
+}
+
+.TD1
+{
+    BACKGROUND-COLOR: #99ccff;
+    COLOR: black;
+    FONT-FAMILY: Tahoma;
+    font-SIZE: 10pt;
+	font-weight: bold   
+}
+.TD2
+{
+    BACKGROUND-COLOR: #99ccff;
+    COLOR: black;
+    FONT-FAMILY: Tahoma;
+    font-SIZE: 12pt;
+   font-weight: bold
+}
+.TD3
+{
+    BACKGROUND-COLOR: #99ccff;
+    COLOR: black;
+    FONT-FAMILY: Tahoma;
+    font-SIZE: 10pt;
+}
+.TDP
+{
+    BACKGROUND-COLOR: white;
+    COLOR: black;
+    FONT-FAMILY: 'Tahoma';
+    FONT-SIZE: small
+}
+.TABLA_HEADER
+{
+    BORDER-BOTTOM: 1px;
+    BORDER-LEFT: 1px;
+    BORDER-RIGHT: 1px;
+    BORDER-TOP: 1px;
+    bordercolorlight: "#C0C0C0";
+    bordercolordark: "#C0C0C0";
+    bordercolor: "#C0C0C0"
+}
+tr.resaltar {
+    background-color: #000000;
+    cursor: pointer;
+}
+
+.tb1 {
+	background:#FFFFFF url(images/search.png) no-repeat 4px 4px;
+	padding:4px 4px 4px 22px;
+	border:1px solid #CCCCCC;	
+	width:180px;
+	height:23px;
+}
