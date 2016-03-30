@@ -41,14 +41,19 @@ section{
 }
 
 .boton-cuenta{
-	float:right; width:auto; height:45px; padding:10px 0 0; margin:0px;
+	/*float:right;*/ width:auto; /*height:45px;*/ /*padding:10px 0 0;*/padding:6px 12px 0; margin:0px;
+}
+/*este es para el ingreso al panel de clientes */
+.campos-acceso{
+    height:18px; border-radius: 4px;
 }
 .boton{
 	border-radius: 5px; padding:5px 12px;
 }
-.boton:hover {
+
+/*.boton:hover {
 	border: 1px solid #D3D3D3; border-bottom-color: #BFBFBF; padding:5px 11px;
-}
+}*/
 .boton:active {
 	background-color: #eee;
 }

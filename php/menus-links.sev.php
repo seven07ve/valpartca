@@ -30,10 +30,78 @@ function buscador(){
       </div>';
 }
 function ingreso(){
+    echo "<script language=\"JavaScript1.2\" >
+
+if (\"<%=Session(\"glAutorizacion\")%>\" != \'') {
+	 
+	if (\"<%=Session(\"glAutorizacion\")%>\" == 'UNE') {
+		alert(\"Usuario No Existe\")  
+	}
+	if (\"<%=Session(\"glAutorizacion\")%>\" == 'CI') {
+		alert(\"Clave Incorrecta\") 		
+	}	  
+	if (\"<%=Session(\"glAutorizacion\")%>\" == 'UNA') {
+		alert(\"Usuario No Autorizado\")  
+	}	
+}
+
+function validar() {	
+	if (event.keyCode == 13) {		
+		enviar()
+		}
+}
+
+function load() {
+
+	if (document.frmGral.LOGIN.value == '') {
+		document.frmGral.LOGIN.focus()
+		}
+		else {
+		document.frmGral.PASSWORD.focus()
+	}
+
+}
+
+function enviar() {
+
+	var err
+
+	document.frmGral.cmdEnviar.disabled = true;
+
+	err = '0'
+
+	if (document.frmGral.LOGIN.value == '') {
+		alert('Por favor, Ingrese El Usuario');
+		document.frmGral.cmdEnviar.disabled = false;
+		document.frmGral.LOGIN.focus();
+		err = '1'
+	}
+
+	if (document.frmGral.PASSWORD .value == '' && err == '0') {
+		alert('Por favor, Ingrese Contraseña');
+		document.frmGral.cmdEnviar.disabled = false;
+		document.frmGral.PASSWORD .focus();
+		document.frmGral.LOGIN.value = document.frmGral.LOGIN.value; 
+		err = '1'
+	}
+
+	if (err == '0') {
+		document.frmGral.submit(); 
+	}
+	
+}
+</script>";
+    echo '<div class="ingreso">';
+    echo '<form NAME="frmGral" METHOD="post" ACTION="Pedidos/defaults.asp" target="_parent" >';
+    echo '<div class="boton-cuenta"><input type="submit" name="cmdEnviar" value="Ingresar" onclick="javascript:enviar();" tabindex="2" class="boton fa fa-sign-in" style="color: rgba(1,100,168,1.00); font-family: \'Open Sans\', sans-serif;"/></div>'."\n";
+	echo '</div>';
 	echo '<div class="ingreso">';
-	 echo '<div class="boton-cuenta"><a href="http://www.valpartca.com/contacto" class="boton" ><i class="fa fa-sign-in"></i> Afiliarse</a></div> '."";
-     echo '<div class="boton-cuenta"><a href="http://www.valpartca.com/demo"" class="boton" ><i class="fa fa-cuenta"></i> Ingresar</a></div>'."\n";
-	 echo '</div>';
+//	 echo '<div class="boton-cuenta"><a href="http://www.valpartca.com/contacto" class="boton" ><i class="fa fa-sign-in"></i> Afiliarse</a></div> '."";
+//    echo '<div class="boton-cuenta"><a href="http://www.valpartca.com/demo"" class="boton" ><i class="fa fa-cuenta"></i> Ingresar</a></div>'."\n";
+    echo '<div class="boton-cuenta"><input class="campos-acceso" name="LOGIN" size="15" maxlength="15"  onkeypress="validar();" placeholder="Usuario"/></div>'."\n";
+    echo '<div class="boton-cuenta"><input class="campos-acceso" name="PASSWORD" type="password" maxlength="10" size="15" value="" onkeypress="validar();"  placeholder="Password"/></div>'."\n";
+    echo '</form>';
+	echo '</div>';
 }
 
 function rs($pag){
