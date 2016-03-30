@@ -1,0 +1,31 @@
+User-agent: *
+Crawl-delay: 30
+
+User-agent: * 
+Allow: /
+
+User-agent: *
+Allow: /quienes-somos/
+
+User-agent: *
+Allow: /noticias/
+
+User-agent: *
+Allow: /nuestras-marcas/
+
+User-agent: *
+Allow: /catalogo/
+
+User-agent: *
+Allow: /multimedia/
+
+User-agent: *
+Allow: /contacto/
+
+User-agent: *
+Allow: /empleos/
+
+User-agent: *
+Disallow: /acceso/
+
+Sitemap: http://www.valpartca.com/sitemap.xml
