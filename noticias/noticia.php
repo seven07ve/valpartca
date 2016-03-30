@@ -8,10 +8,8 @@ $ssql=sprintf("SELECT * FROM noticias WHERE id_noticia='".$_GET["news"]."'");
 //ejecuta la sentencia sql
 $resultado = $mysqli->query($ssql);
 $resultado2 =  $mysqli->query($ssql);
+
 //busqueda de la ultima noticia
-//$ssql_meta=sprintf("SELECT * FROM noticias ORDER BY id_noticia DESC LIMIT 1");
-//ejecuta la sentencia sql
-//$res_meta = $mysqli->query($ssql_meta);
 $row_meta = $resultado2->fetch_array(MYSQLI_ASSOC);
 $meta = $row_meta["titulo"]." ".strip_tags(substr($row_meta["contenido"],0,800));
 ?>
@@ -25,10 +23,10 @@ $meta = $row_meta["titulo"]." ".strip_tags(substr($row_meta["contenido"],0,800))
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="rating" content="general">
-	<meta name="robots" content="index, follow, archve">
+	<meta name="robots" content="index, follow">
 	<meta name="revisit-after" content="10 days">
 	<meta name="copyright" content="Este sitio y todo su contenido © Copyright 2016 VALPARTS,C.A. Mérida, Venezuela.">
-<title>VALPARTS,C.A.</title>
+	<title><?php echo $row_meta["titulo"]; ?> VALPARTS,C.A.</title>
 <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
 <link href="../css/estilos.css" rel="stylesheet" type="text/css">
 <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -37,6 +35,7 @@ $meta = $row_meta["titulo"]." ".strip_tags(substr($row_meta["contenido"],0,800))
 </head>
 
 <body>
+	<?php include_once("../php/analyticstracking.php") ?>
 <header>
   <nav>
   <div class="cont-hed-sup">

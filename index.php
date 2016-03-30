@@ -12,7 +12,7 @@ include("php/dbconect.php");
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="rating" content="general">
-	<meta name="robots" content="index, follow, archve">
+	<meta name="robots" content="index, follow">
 	<meta name="revisit-after" content="10 days">
 	<meta name="copyright" content="Este sitio y todo su contenido © Copyright 2016 VALPARTS,C.A. Mérida, Venezuela.">
 	<title>VALPARTS,C.A.</title>
@@ -23,6 +23,7 @@ include("php/dbconect.php");
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 </head>
 <body>
+	<?php include_once("php/analyticstracking.php") ?>
 <header>
   <nav>
   <div class="cont-hed-sup">
