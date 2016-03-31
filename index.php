@@ -24,6 +24,7 @@ include("php/dbconect.php");
 </head>
 <body>
 	<?php include_once("php/analyticstracking.php") ?>
+	<section style="display:none;"><h1>VALPARTS,C.A.</h1>  <h2>Mayorista de Repuestos Automotrices en Venezuela dedicada a importar y distribuir accesorios y partes eléctricas-mecánicas-ignición -Proveedor autorizado RALLY.</h2> </section>
 <header>
   <nav>
   <div class="cont-hed-sup">
