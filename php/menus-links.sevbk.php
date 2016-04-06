@@ -92,13 +92,14 @@ function enviar() {
 }
 </script>";
     echo '<div class="ingreso">';
-    echo '<form NAME="frmGral" METHOD="post" ACTION="../Pedidos/defaults.asp" target="_parent" >';
+    echo '<form NAME="frmGral" METHOD="post" ACTION="Pedidos/defaults.asp" target="_parent" >';
     echo '<div class="boton-cuenta"><input type="submit" name="cmdEnviar" value="Ingresar" onclick="javascript:enviar();" tabindex="2" class="boton fa fa-sign-in" style="color: rgba(1,100,168,1.00); font-family: \'Open Sans\', sans-serif;"/></div>'."\n";
 	echo '</div>';
 	echo '<div class="ingreso">';
+//	 echo '<div class="boton-cuenta"><a href="http://www.valpartca.com/contacto" class="boton" ><i class="fa fa-sign-in"></i> Afiliarse</a></div> '."";
+//    echo '<div class="boton-cuenta"><a href="http://www.valpartca.com/demo"" class="boton" ><i class="fa fa-cuenta"></i> Ingresar</a></div>'."\n";
     echo '<div class="boton-cuenta"><input class="campos-acceso" name="LOGIN" size="15" maxlength="15"  onkeypress="validar();" placeholder="Usuario"/></div>'."\n";
     echo '<div class="boton-cuenta"><input class="campos-acceso" name="PASSWORD" type="password" maxlength="10" size="15" value="" onkeypress="validar();"  placeholder="Password"/></div>'."\n";
-    echo '<input name="CIA" type="hidden"  value="VAL"/>';    
     echo '</form>';
 	echo '</div>';
 }
