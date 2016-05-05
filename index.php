@@ -7,7 +7,7 @@ include("php/dbconect.php");
 <head>
 	<meta charset="utf-8">
 	<meta name="Title" content="VALPARTS,C.A.">
-	<meta name="description" content="Mayorista de Repuestos Automotrices en Venezuela dedicada a importar y distribuir accesorios y partes eléctricas-mecánicas-ignición -Proveedor autorizado RALLY. ">
+	<meta name="description" content="Mayorista de Repuestos Automotrices en Venezuela dedicada a importar y distribuir partes eléctricas-mecánicas-ignición -Proveedor autorizado RALLY. ">
 	<meta name="keywords" content="empresa, mayorista, repuestos, partes, automotriz, automotrices, vehiculos, carros, camiones, partes eléctricas, eléctricas, partes mecánicas, mecánicas, ignición, boninas ignición, bombas agua, bombas gasolina, bujías, cables bujía, distribuidores, filtros gasolina, reluctores, rotores, tapas, sensores, vacuums, válvulas PCV, automáticos, bobinas captadoras, bornes, carboneras, luces HID, ramales cruce, relays, resistencias, switches, bocinas rueda, carburadores, cepillos limpia parabrisas, limpia parabrisas, platos clutch, discos clutch, envases, reservorios, hidrocollarines, poleas, tensores, correas" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
