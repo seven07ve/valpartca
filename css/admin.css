@@ -89,7 +89,7 @@ input{
 	width:330px; height:1000px; display:inline-block; margin:0; padding:50px 0 0; background:rgba(0,0,0,0.30); overflow:auto;
 }
 .cont-inf-mont{
-	float:left; width:900px; height:800px; margin:30px 1% 0; display:inline-block;
+	float:left; width:900px; margin:30px 1% 0; display:inline-block;
 }
 .cont-img-mont{
 	width:330px; max-height:230px; margin:5px 0;

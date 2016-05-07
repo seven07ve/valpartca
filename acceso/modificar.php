@@ -96,62 +96,6 @@ $fila = $resultado->fetch_array(MYSQLI_ASSOC);
   <div class="contenedor">
     <div class="cont-inf-mont">
       <h2>Sección <?php echo $titulo; ?></h2>
-
-<?php
-if ($_GET["num"] == 3){
-	if ($_GET["msje"] == 1){
-		$mensaje="El Catálogo fué Actualizado";
-	}
-	elseif ($_GET["msje"] == 2){
-		$mensaje="El Catálogo fué Eliminado";
-	}
-	else{
-			$mensaje="Catálogos Actuales";
-	}
-	echo '<h2>'.$mensaje.'</h2><br />';
-	$directorio = '../catalogo';
-	$archivo  = scandir($directorio);
-	//ordena inversamente por nombre
-	//print_r($archivo);
-	$pos=1;
-			echo '<form action="ins_pdf.php" method="post" enctype="multipart/form-data" name="form0" id="form0"  style="width:900px; margin-left:0; margin-bottom:10px;">
-			<input type="hidden" name="MAX_FILE_SIZE"  value="10000000"/>
-			<label for="fileField2"><h3>Agregar Catálogo</h3></label>';
-			echo '<input type="hidden" name="pagina" value="modificar.php?msje=1&num=3" />
-			<input type="file" name="img" id="fileField2" style="margin:0 0 15px" />
-			<input type="submit" name="submit" id="submit" value="Agregar" />
-		  </form><br /><br />';
-		  echo '<div style="width:900px;">';
-	Foreach ($archivo as $valor)
-	{
-		$valor;
-		if ($valor == '.' or $valor == '..' or $valor == 'index.php'){
-		}
-		else{
-			//muestra la imagen
-	//		echo '<h3><a href="../catalogo/'.$valor.'">'.$valor.'</a></h3>';
-			//echo "pathinfo('../catalogo/'.$valor);";
-			$partes_ruta = pathinfo('../catalogo/'.$valor);		
-	//para  versiones posteriores a php5.2
-	//		$ultimo = explode("-",$partes_ruta['filename']);
-	//para  versiones anteriores a php5.2
-			$ultimo = explode("-",str_replace(".", "",substr($partes_ruta['basename'],0,-4)));
-			//echo '<img src="../catalogo/'.$valor.'" alt=""/> ';
-			//echo 'nombre '.$valor;
-	//		echo 'cc'.$ultimo["1"];
-			$sig_nomb=$ultimo["1"]+1;
-			echo '	<div style="float:left; width:700px; height:65px; border-bottom:1px solid; margin:0; text-align:left;"><h2><a href="../catalogo/'.$valor.'" target="_blank">'.$valor.'</a></h2></div>
-		<div style="float:left; width:190px; height:65px; border-bottom:1px solid; margin:0; text-align:center;"><form id="form'.$pos.'" name="form'.$pos.'" method="post" action="cat-del.php" style="margin:20px 0;">';
-		  echo '<input type="hidden" name="pagina" value="modificar.php?msje=2&num=3" />';
-		  echo '<input type="hidden" name="nomb_act" value="'.$valor.'" />
-		  <input type="submit" name="submit" id="submit" value="Eliminar" />
-		</form></div>';
-			$pos++;
-		}
-	}
-	echo '<br /><br /></div>';
-}
-?>
       <form action="modificado.php" method="post" name="form1" id="form1" style="margin-left:0; width:900px;">
       <input type="hidden" name="id_cont" value="<?php echo $id_cont ?>" />
         <label> Ultima modificación por:<br />
@@ -173,7 +117,59 @@ if ($_GET["num"] == 3){
         <input type="submit" name="Guardar" value="Guardar"/>
       </form>
       <br />
+<?php
+	if ($_GET["num"] == 3){
+		if ($_GET["msje"] == 0){
+			$mensaje="El Catálogo fué Agregado";
+		}
+		if ($_GET["msje"] == 1){
+			$mensaje="El Archivo no es un PDF";
+		}
+		elseif ($_GET["msje"] == 2){
+			$mensaje="El Catálogo fué Eliminado";
+		}
+		else{
+			$mensaje="Catálogos Actuales";
+		}
+		echo '<h2>'.$mensaje.'</h2><br />';
+		$directorio = '../catalogo';
+		$archivo  = scandir($directorio);
+		//ordena inversamente por nombre
+		//print_r($archivo);
+		$pos=1;
+		echo '<form action="ins_pdf.php" method="post" enctype="multipart/form-data" name="form0" id="form0"  style="width:900px; margin-left:0; margin-bottom:10px;">
+			<input type="hidden" name="MAX_FILE_SIZE"  value="10000000"/>
+			<label for="fileField2"><h3>Agregar Catálogo</h3></label>';
+		echo '<input type="hidden" name="pagina" value="modificar.php?msje=0&num=3" />
+			<input type="file" name="img" id="fileField2" style="margin:0 0 15px" />
+			<input type="submit" name="submit" id="submit" value="Agregar" />
+		  </form><br /><br />';
+		echo '<div style="width:900px;">';
+
+		//busqueda de los datos de la pagina
+		$ssql_cat=sprintf("SELECT * FROM catalogos ORDER BY nombre");
+		//ejecuta la sentencia sql
+		$resultado_cat = $mysqli->query($ssql_cat);
+
+		while ($fila = $resultado_cat->fetch_array(MYSQLI_ASSOC)){
+			$partes_ruta = '../catalogo/'.$fila["nomb_arch"];
+			echo '
+		<div style="float:left; width:700px; height:65px; border-bottom:1px solid; margin:0; text-align:left;">
+			<h2><a href="../catalogo/'.$fila["nomb_arch"].'" target="_blank">'.$fila["nombre"].'</a></h2>
+		</div>
+		<div style="float:left; width:190px; height:65px; border-bottom:1px solid; margin:0; text-align:center;">
+			<form id="form'.$pos.'" name="form'.$pos.'" method="post" action="cat-del.php" style="margin:20px 0;">';
+			echo '<input type="hidden" name="pagina" value="modificar.php?msje=2&num=3" />';
+			echo '<input type="hidden" name="id_catalogo" value="'.$fila["id_catalogo"].'" />
+		  <input type="submit" name="submit" id="submit" value="Eliminar" />
+		</form></div>';
+			$pos++;
+		}
+		echo '<br /></div>';
+	}
+?>
       <!--CAMBIAR FONDO-->
+      
 	<form action="ins_img-bg.php" method="post" enctype="multipart/form-data" name="form2" id="form2" style="margin-bottom:30px;">
 		<input type="hidden" name="MAX_FILE_SIZE"  value="6000000"/>
         <label for="fileField2"><h3>Cambiar fondo</h3></label>
@@ -233,7 +229,7 @@ Foreach ($ficheros1 as $valor)
     </div>
     
 <?php
-	echo '<div style="width:1260px; height:700px; margin:450px 0 30px 0;  background:url(../imgsbg/'.$fondo.')';
+	  echo '<div style="width:1260px; height:700px; margin-bottom:30px; display: inline-block; background:url(../imgsbg/'.$fondo.')';
 	$rep = array("0" => "no-repeat", "1" => "repeat", "2" => "repeat-x", "3" =>"repeat-y");
 	echo ' '.$rep[$repetir].'"></div>';
 ?>
